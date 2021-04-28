@@ -1,4 +1,4 @@
-yash1610.dev website built using Jekyll
+yash1610.dev website built using Jekyll uses a custom made theme
 
 Requirements
 
