@@ -1,0 +1,31 @@
+---
+layout: page
+title: Tags
+---
+
+<div class="articles">
+
+	<div class="list_tags">
+		{% for tag in site.tags %}
+		<a href="#{{ tag[0] | slugify }}" class="post_tag">{{ tag[0] }}</a>
+		{% endfor %}
+	</div>
+	<hr class="wider_hr">
+	<div class="post_by_tags">
+		{% for tag in site.tags %}
+		<h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+		<ul class="list_of_articles">
+			{% for post in tag[1] %}
+			<li>
+				<h2>
+					<a class="post-link" href="{{ post.url | relative_url }}">
+						{{ post.title | escape }}
+					</a>
+				</h2>
+				{%- include post_meta.html -%}
+			</li>
+			{% endfor %}
+		</ul>
+		{% endfor %}
+	</div>
+</div>

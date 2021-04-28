@@ -1,0 +1,24 @@
+---
+layout: page
+title: "Articles"
+---
+
+<div class="articles">
+
+	<ul class="list_of_articles">
+		{%- for post in site.categories.articles -%}
+		<li>
+			<h2>
+				<a class="post-link" href="{{ post.url | relative_url }}">
+					{{ post.title | escape }}
+				</a>
+			</h2>
+			{%- include post_meta.html -%}
+			{%- if site.show_excerpts -%}
+			{{ post.excerpt }}
+			{%- endif -%}
+		</li>
+		{%- endfor -%}
+	</ul>
+
+</div>

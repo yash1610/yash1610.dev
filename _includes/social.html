@@ -1,0 +1,87 @@
+<ul class="social-media-list">
+
+	{%- if site.github_username -%}
+	<li>
+		<a href="https://github.com/{{ site.github_username| cgi_escape | escape }}">
+			<svg class="social-icon icon-github">
+				<use xlink:href="{{ '/assets/symbol-defs.svg#icon-github' | relative_url }}">
+				</use>
+			</svg>
+			<span class="username">
+				{{ site.github_username| escape }}
+			</span>
+		</a>
+	</li>
+	{%- endif -%}
+
+	{%- if site.linkedin_username -%}
+	<li>
+		<a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}">
+			<svg class="social-icon icon-linkedin-square">
+				<use xlink:href="{{ '/assets/symbol-defs.svg#icon-linkedin-square' | relative_url }}">
+				</use>
+			</svg>
+			<span class="username">
+				{{ site.linkedin_username| escape }}
+			</span>
+		</a>
+	</li>
+	{%- endif -%}
+
+	{%- if site.steam_username -%}
+	<li>
+		<a href="https://steamcommunity.com/id/{{ site.steam_username| cgi_escape | escape }}">
+			<svg class="social-icon icon-steam">
+				<use xlink:href="{{ '/assets/symbol-defs.svg#icon-steam' | relative_url }}">
+				</use>
+			</svg>
+			<span class="username">
+				{{ site.steam_username| escape }}
+			</span>
+		</a>
+	</li>
+	{%- endif -%}
+
+	{%- if site.twitter_username -%}
+	<li>
+		<a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}">
+			<svg class="social-icon icon-twitter">
+				<use xlink:href="{{ '/assets/symbol-defs.svg#icon-twitter' | relative_url }}">
+				</use>
+			</svg>
+			<span class="username">
+				{{ site.twitter_username| escape }}
+			</span>
+		</a>
+	</li>
+	{%- endif -%}
+
+	{%- if site.youtube_username -%}
+	<li>
+		<a href="https://youtube.com/channel/{{ site.youtube_username| cgi_escape | escape }}">
+			<svg class="social-icon icon-youtube-play">
+				<use xlink:href="{{ '/assets/symbol-defs.svg#icon-youtube-play' | relative_url }}">
+				</use>
+			</svg>
+			<span class="username">
+				{{ site.youtube_username| escape }}
+			</span>
+		</a>
+	</li>
+	{%- endif -%}
+
+	{%- if site.rss -%}
+	<li>
+		<a href="{{ 'feed.xml' | relative_url }}">
+			<svg class="social-icon icon-feed">
+				<use xlink:href="{{ '/assets/symbol-defs.svg#icon-feed' | relative_url }}">
+				</use>
+			</svg>
+			<span class="username">
+				{{ site.rss | escape }}
+			</span>
+		</a>
+	</li>
+	{%- endif -%}
+
+</ul>

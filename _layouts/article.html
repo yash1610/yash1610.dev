@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="article_content">
+	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+		{%- if page.hero_image -%}
+		<div class="article_hero_img_container">
+			<img src="{{page.hero_image}}" class="article_hero_img" alt="{{page.hero_image_alt}}">
+		</div>
+		{%- endif -%}
+
+		<header class="post_header">
+			<h1 class="post_title" itemprop="name headline">{{ page.title | escape }}</h1>
+			<span class="post_meta">
+				<time class="date_published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+					📅 {{ page.date | date: site.date_format }}
+				</time>
+				<span class="word_count">
+					{% assign words = content | number_of_words %}
+					📃 {{ words }} words
+				</span>
+				<span class="reading_time">
+					🕓
+					{% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} </span>
+				</span>
+				{% if page.tags %}
+				<div class="tag_container">
+					{% for tag in page.tags %}
+					<a href="{{ site.baseurl }}{{ site.tags_page }}#{{ tag | slugify }}" class="post_tag">{{ tag }}</a>
+					{% endfor %}
+				</div>
+				{% endif %}
+		</header>
+
+		<hr class="wider_hr">
+
+		<div class="post_content" itemprop="articleBody">
+			{{ content }}
+		</div>
+
+	</article>
+</div>

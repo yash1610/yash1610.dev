@@ -1,0 +1,230 @@
+---
+layout: default
+title: "Home"
+---
+
+<div class="home_content">
+
+	<div class="hero_image">
+		<img src="assets/images/banner_image.webp" class="hero_img" alt="">
+	</div>
+
+	<div class="hero_text">
+		<h1>Hi! I am Yash</h1>
+		<h3>Creator of Errors & Bugs | Software & Hardware Developer | Breaker of Things</h3>
+		<p>
+			Applying my knowledge of Software & Hardware development along with comprehension of other STEM fields to
+			build a career in the field of Computer Science.
+		</p>
+		<p>
+			Currently looking for a challenging position where I can leverage my abilities for the benefit of the
+			organisation and solve complex problems.
+		</p>
+		<p>
+			Hoping to further the horizons of human knowledge in the field of Computer Science.
+		</p>
+	</div>
+
+	<div class="interests home_section">
+
+		<h2 class="subheading">Interests</h2>
+
+		<ul class="interests_list">
+			<li>
+				<details>
+					Games
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#game-controller' | relative_url }}"></use>
+							<title>Games</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Music
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#listening' | relative_url }}"></use>
+							<title>Music</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Reading
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#bookshelf' | relative_url }}"></use>
+							<title>Reading</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Anime | Movies | TV Shows
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#tv' | relative_url }}"></use>
+							<title>Anime | Movies | TV Shows</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Cycling
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#bicycle' | relative_url }}"></use>
+							<title>Cycling</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					3D Printing
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#3d-printing' | relative_url }}"></use>
+							<title>3D Printing</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Robotics
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#robotic-arm' | relative_url }}"></use>
+							<title>Robotics</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					DIY | Maker | Tinkerer
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#toolbox' | relative_url }}"></use>
+							<title>DIY | Maker | Tinkerer</title>
+						</svg>
+			</li>
+			<li>
+				<details>
+					Electronics
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#microcontroller' | relative_url }}"></use>
+							<title>Electronics</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Server Homelab
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#server' | relative_url }}"></use>
+							<title>Server Homelab</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Computer Science
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#desktop-computer' | relative_url }}"></use>
+							<title>Computer Science</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Open Source
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#open-source' | relative_url }}"></use>
+							<title>Open Source</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Mathematics
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#calculating' | relative_url }}"></use>
+							<title>Mathematics</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Physics
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#physics' | relative_url }}"></use>
+							<title>Physics</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					Chemistry
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#flask' | relative_url }}"></use>
+							<title>Chemistry</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+			<li>
+				<details>
+					DOTA 2
+					<summary>
+						<svg class="icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#dota-2' | relative_url }}"></use>
+							<title>DOTA 2</title>
+						</svg>
+					</summary>
+				</details>
+			</li>
+		</ul>
+
+	</div>
+
+	<div class="home_list_of_articles home_section">
+
+		<h2 class="subheading">Articles</h2>
+		<ul class="list_of_articles">
+			{%- for post in site.posts limit:5 -%}
+			<li>
+				<h2>
+					<a class="post-link" href="{{ post.url | relative_url }}">
+						{{ post.title | escape }}
+					</a>
+				</h2>
+				{%- include post_meta.html -%}
+			</li>
+			{%- endfor -%}
+		</ul>
+
+	</div>
+
+
+</div>

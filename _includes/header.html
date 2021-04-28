@@ -1,0 +1,29 @@
+<header>
+
+	<div class="container branding">
+		<a id="site-title" rel="author" href="{{ '/' | relative_url }}">
+			<h1> yash1610.dev </h1>
+		</a>
+	</div>
+
+	<div class="container">
+
+		<nav>
+			<ul id="nav-bar">
+				{% for item in site.data.navigation %}
+				<li {% if item.link=="/aboutme.html" %}id="aboutme" {% endif %}>
+					<a {% if item.link==page.url=="/" %} class="active" {% endif %} {% if page.url contains item.link %}
+						{% unless item.link=="/" %} class="active" {% endunless %} {% endif %} {% if page.url
+						contains "projects" and item.link contains "projects" %} class="active" {% endif %} {% if
+						page.url contains "articles" and item.link contains "articles" %} class="active" {% endif %}
+						href="{{ item.link }}">
+						{{ item.name }}
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
+
+	</div>
+	<hr>
+</header>

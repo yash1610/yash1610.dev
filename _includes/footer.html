@@ -1,0 +1,46 @@
+<footer>
+	<hr>
+	<div class="container footer-grid">
+		<div id="box-1">
+			<ul id="contact-list">
+				<li id="p-name">
+					{%- if site.author -%}
+					{{ site.author | escape }}
+					{%- else -%}
+					{{ site.title | escape }}
+					{%- endif -%}
+				</li>
+				<li><a id="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+				<li>Toggle Theme: <button class="theme-toggle">☀️</button></li>
+			</ul>
+		</div>
+		<div id="box-2">
+			<p><b>{{- site.description | escape -}}</b></p>
+			<p>
+				This work is licensed under a
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+					Creative Commons Attribution 4.0 International License.
+				</a>
+				<a class="license_link spacer" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+					<svg class="license_icon">
+						<use xlink:href="{{ '/assets/symbol-defs.svg#icon-cc' | relative_url }}"></use>
+					</svg>
+					<svg class="license_icon">
+						<use xlink:href="{{ '/assets/symbol-defs.svg#icon-by' | relative_url }}"></use>
+					</svg>
+					<svg class="license_icon">
+						<use xlink:href="{{ '/assets/symbol-defs.svg#icon-sa' | relative_url }}"></use>
+					</svg>
+				</a>
+				<br>
+				The website source is licensed under a
+				<a rel="license" href="https://github.com/yash1610/yash1610.dev/blob/main/LICENSE">
+					GNU General Public License v3.0 or later
+				</a>
+			</p>
+		</div>
+		<div id="box-3">
+			{%- include social.html -%}
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,12 @@
+<span class="post_meta">
+	<time class="date_published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+		📅 {{ post.date | date: site.date_format }}
+	</time>
+	<span class="word_count">
+		📃 {{ post.content | number_of_words }} words
+	</span>
+	<span class="reading_time">
+		🕓
+		{% assign words = post.content | number_of_words %}
+		{% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} </span>
+	</span>

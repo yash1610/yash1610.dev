@@ -1,0 +1,14 @@
+- name: 🏠 Home
+  link: /
+- name: 📝 Articles
+  link: /articles.html
+- name: 🚧 Projects
+  link: /projects.html
+- name: 🚀 Experience
+  link: /experience.html
+- name: 🎓 Education
+  link: /education.html
+- name: 🖥️ Skills
+  link: /skills.html
+- name: 🌱 About Me
+  link: /aboutme.html
