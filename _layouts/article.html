@@ -24,6 +24,19 @@ layout: default
 					🕓
 					{% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} </span>
 				</span>
+				{%- if page.project_source -%}
+				<span class="project_source">
+					<a href="{{page.project_source}}" class="project_source_link">
+						<svg class="project_source_icon">
+							<use xlink:href="{{ '/assets/symbol-defs.svg#icon-github' | relative_url }}">
+							</use>
+						</svg>
+						<span class="project_source_desc">
+							Code
+						</span>
+					</a>
+				</span>
+				{%- endif -%}
 				{% if page.tags %}
 				<div class="tag_container">
 					{% for tag in page.tags %}
