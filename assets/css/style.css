@@ -5,8 +5,18 @@
 	--clr-bg-secondary: #eee;
 	--clr-bg-content: #aaa;
 	--clr-bg-code: #212121;
-	--clr-alert: #f44336;
-	--clr-info: #2196f3;
+	--clr-good: #155724;
+	--clr-good-bg: #d4edda;
+	--clr-good-border: #c3e6cb;
+	--clr-info: #004085;
+	--clr-info-bg: #cce5ff;
+	--clr-info-border: #b8daff;
+	--clr-warn: #856404;
+	--clr-warn-bg: #fff3cd;
+	--clr-warn-border: #ffeeba;
+	--clr-danger: #721c24;
+	--clr-danger-bg: #f8d7da;
+	--clr-danger-border: #f5c6cb;
 	--clr-line: lightgray;
 	--clr-font-primary: black;
 	--clr-font-secondary: #555;
@@ -371,6 +381,17 @@ hr {
 	border-top: 3px solid var(--clr-line);
 	margin: auto;
 	padding: 0;
+}
+
+hr.auto_width {
+	width: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+		border-top-color: currentcolor;
+		border-top-style: none;
+		border-top-width: 0px;
+	border-top: 1px solid rgba(0,0,0,.1);
 }
 
 /* ==========================================================================
@@ -950,6 +971,50 @@ a.post_tag:visited {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.alert {
+	position: relative;
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: var(--container-border-radius);
+}
+
+.alert a {
+	color: inherit;
+}
+
+.alert a::after {
+	color: inherit;
+}
+
+.alert a:visited {
+	color: inherit;
+}
+
+.good {
+	color: var(--clr-good);
+	background-color: var(--clr-good-bg);
+	border-color: var(--clr-good-border);
+}
+
+.info {
+	color: var(--clr-info);
+	background-color: var(--clr-info-bg);
+	border-color: var(--clr-info-border);
+}
+
+.warn {
+	color: var(--clr-warn);
+	background-color: var(--clr-warn-bg);
+	border-color: var(--clr-warn-border);
+}
+
+.danger {
+	color: var(--clr-danger);
+	background-color: var(--clr-danger-bg);
+	border-color: var(--clr-danger-border);
+}
+
 .footnotes {
 	padding-top: 2rem;
 }
@@ -1242,7 +1307,7 @@ footer ul li {
 
 	.article_content img:not(.hero_img, .article_hero_img) {
 		padding: 0.3rem;
-		width: var(--desktop-width-992);
+		width: 100%;
 		margin: 0 0.1rem 0.5rem 0.1rem;
 	}
 

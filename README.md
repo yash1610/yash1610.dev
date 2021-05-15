@@ -1,4 +1,6 @@
-yash1610.dev website built using Jekyll uses a custom made theme
+yash1610.dev website built using Jekyll uses a self made custom theme
+
+It also has alot of personal things, that I still need to remove from the repo
 
 Requirements
 
