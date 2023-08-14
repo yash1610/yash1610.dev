@@ -594,6 +594,11 @@ abbr {
 	background: #55acee;
 }
 
+.icon-mastodon {
+	background: white;
+}
+
+
 .icon-feed {
 	background: #f60;
 }
@@ -1052,6 +1057,8 @@ footer ul li {
 	text-align: center;
 	justify-content: left;
 	grid-area: 3 / 1 / 3 / 1;
+	border-top: 3px solid var(--clr-line);
+	border-bottom: 3px solid var(--clr-line);
 	padding: 0 1em 0 1em;
 }
 
@@ -1339,34 +1346,6 @@ footer ul li {
 		font-size: 1.4rem;
 	}
 
-	.footer-grid {
-		grid-template-columns: 0.35fr 0.65fr;
-		grid-template-rows: auto;
-		padding: 1em 0 0 0;
-	}
-
-	#box-1 {
-		text-align: left;
-		grid-area: 1 / 1 / 1 / 1;
-		margin: 0 0 2em 0;
-		padding: 0 1em 0 0;
-		border-right: 3px solid var(--clr-line);
-		font-weight: 700;
-	}
-
-	#box-2 {
-		text-align: left;
-		grid-area: 1 / 2 / 1 / 2;
-		margin: 0 2em 2em 0;
-		padding: 0 0 0 1em;
-	}
-
-	#box-3 {
-		grid-area: 2 / 1 / 2 / 3;
-		margin: 0% 12.5% 2% 12.5%;
-		padding: 0 0 1em 0;
-	}
-
 	#contact-list {
 		padding: 0 0 0 2em;
 	}
@@ -1416,6 +1395,36 @@ footer ul li {
 	.hero_text p {
 		font-size: 1.35rem;
 		line-height: normal;
+	}
+
+	.footer-grid {
+		grid-template-columns: 0.35fr 0.65fr;
+		grid-template-rows: auto;
+		padding: 1em 0 0 0;
+	}
+
+	#box-1 {
+		text-align: left;
+		grid-area: 1 / 1 / 1 / 1;
+		margin: 0 0 2em 0;
+		padding: 0 1em 0 0;
+		border-right: 3px solid var(--clr-line);
+		border-top: 0;
+		border-bottom: 0;
+		font-weight: 700;
+	}
+
+	#box-2 {
+		text-align: left;
+		grid-area: 1 / 2 / 1 / 2;
+		margin: 0 2em 2em 0;
+		padding: 0 0 0 1em;
+	}
+
+	#box-3 {
+		grid-area: 2 / 1 / 2 / 3;
+		margin: 0% 12.5% 2% 12.5%;
+		padding: 0 0 1em 0;
 	}
 }
 

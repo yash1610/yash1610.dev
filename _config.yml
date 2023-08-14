@@ -29,11 +29,13 @@ description: >- # this means to ignore newlines until "baseurl:"
   me know about any errors you find.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://yash1610.dev" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  yash1610
-steam_username:  yash1610
-linkedin_username:  yash1610
+github_username: yash1610
+steam_username: yash1610
+linkedin_username: yash1610
 twitter_username: yash_1610
 youtube_username: UCvonxf0PagMxpMJhkp2h-oA
+mastodon_username: yash1610
+pgp_key: B4998D92B999C9F4F1AAC841CDE37C3E9CCB64EB
 twitter:
   username: yash1610
   card: summary
@@ -45,6 +47,7 @@ social:
     - https://twitter.com/yash_1610
     - https://www.youtube.com/channel/UCvonxf0PagMxpMJhkp2h-oA
     - https://steamcommunity.com/id/yash1610
+    - https://mastodon.social/@yash1610
 # pinterest_username: jekyll
 rss: feed.xml
 tags_page: "/articles/tags.html"
